@@ -18,7 +18,21 @@ void apert_format(xmlNode * a_node)
 	xmlNode *cur_node = NULL;
 	int flag=0,i=0;
 
-	
+	int max_len;
+
+	if(i_tag>b_tag)
+	{
+		max_len=i_tag;
+	}
+	else
+	{
+		max_len=b_tag;
+	}    	
+
+	if(NULL == a_node)
+	{
+        	return;
+    	}
 
 	for (cur_node = a_node; cur_node; cur_node = cur_node->next) 
     	{
